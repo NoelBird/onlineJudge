@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>결과</h2>
+{% if result %}
+<div class="text-success">맞았습니다.</div>
+{% else %}
+<div class="text-danger">틀렸습니다.</div>
+{% endif %}
+<h2>에러</h2>
+{% if error %}
+{{error}}
+{% else %}
+에러가 없습니다.
+{% endif %}
+<h2>소요 시간</h2>
+{{duration}} seconds
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Problem A: palindrome</h2>
+
+<p>
+    팰린드롬은 거꾸로 읽어도, 바르게 읽어도 똑같은 문장입니다. <br><br>
+
+    예를들어 <br>
+    level 팰린드롬입니다. <br>
+    star 팰린드롬이 아닙니다. <br>
+    주어진 문자열이 팰린드롬인지 출력하세요. <br>
+</p>
+
+<form action="/submit/" method="post">
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">언어(python3 only)</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="code"></textarea>
+    </div>
+    <input type="submit" class="btn btn-outline-primary">
+</form>
+
+{% endblock %}
