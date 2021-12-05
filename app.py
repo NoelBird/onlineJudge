@@ -27,4 +27,4 @@ def submit():
 #     return render_template('result.html')
 
 if __name__ == "__main__":
-    app.run(port=8000, debug=True)
+    app.run(port=50080, debug=True, host="0.0.0.0")
