@@ -15,9 +15,24 @@
 <form action="/submit/" method="post">
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">언어(python3 only)</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="code"></textarea>
+        <textarea class="codemirror-textarea" id="textarea" name="code"></textarea>
     </div>
     <input type="submit" class="btn btn-outline-primary">
 </form>
 
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/codemirror.css">
+{% endblock %}
+
+{% block js %}
+<script src="/static/js/codemirror.js"></script>
+<script src="/static/mode/python/python.js"></script>
+<script>
+    var myTextarea = document.getElementById("textarea")
+    var editor = CodeMirror.fromTextArea(myTextarea, {
+      lineNumbers: true
+    });
+  </script>
 {% endblock %}
